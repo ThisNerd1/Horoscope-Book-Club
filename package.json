@@ -1,0 +1,19 @@
+{
+  "name": "horoscope-book-club",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThisNerd1/Horoscope-Book-Club.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThisNerd1/Horoscope-Book-Club/issues"
+  },
+  "homepage": "https://github.com/ThisNerd1/Horoscope-Book-Club#readme"
+}
