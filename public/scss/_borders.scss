@@ -1,6 +1,12 @@
 @import 'basic/positions';
 @import 'basic/color';
 
+.divider {
+    height: 1px;
+    background-color: darken($main-color, 50%);
+    padding: 0;
+}
+
 .border {
     border: 0 darken($main-color, 50%) solid;
     padding: $base-padding;
