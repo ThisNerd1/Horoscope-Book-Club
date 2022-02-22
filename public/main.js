@@ -39,6 +39,9 @@ const dropdown = () => {
 navButton.addEventListener('click', dropdown);
 
 const txtTraitsSign = document.getElementById('txt-traits-sign');
+const resultsTraits = document.getElementById('results-matching-traits');
+const resultsLiked = document.getElementById('results-liked-by-sign');
+resultsLiked.style.display = 'none';
 
 changeTab = (tabGroup) => {
     const tabs = document.getElementById(tabGroup);
@@ -53,6 +56,13 @@ makeTabActive = (clickInfo) => {
     let element = event.target;
     if(element.classList.contains('tab')) {
         element.classList.add('active-tab');
+    }
+    if (resultsTraits.style.display == 'none') {
+        resultsTraits.style.display = 'block';
+        resultsLiked.style.display = 'none';
+    } else {
+        resultsTraits.style.display = 'none';
+        resultsLiked.style.display = 'block';
     }
     txtTraitsSign.innerHTML = "Books " + element.innerHTML;
 }

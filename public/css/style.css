@@ -6732,6 +6732,14 @@ ol > li {
     margin-left: 20px !important;
   }
 }
+.results-matching-traits {
+  display: block;
+}
+
+.results-liked-by-sign {
+  display: block;
+}
+
 html {
   background-color: #f1f1f1;
   color: #1c0766;

@@ -10,6 +10,7 @@
 @import 'tables';
 @import 'forms';
 @import 'prebuilts';
+@import 'thisproject';
 
 html {
     background-color: $bg-light;
@@ -83,8 +84,6 @@ img {
 }
 
 // Color edits
-
-
 .hidden-div {
     background-color: $main-color;
     display: none;
