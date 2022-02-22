@@ -57,10 +57,10 @@ makeTabActive = (clickInfo) => {
     if(element.classList.contains('tab')) {
         element.classList.add('active-tab');
     }
-    if (resultsTraits.style.display == 'none') {
+    if (element.classList.contains('traits-pick')) {
         resultsTraits.style.display = 'block';
         resultsLiked.style.display = 'none';
-    } else {
+    } else if (element.classList.contains('liked-pick')) {
         resultsTraits.style.display = 'none';
         resultsLiked.style.display = 'block';
     }
