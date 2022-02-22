@@ -37,3 +37,27 @@ const dropdown = () => {
 }
 
 navButton.addEventListener('click', dropdown);
+
+const txtTraitsSign = document.getElementById('txt-traits-sign');
+
+changeTab = (tabGroup) => {
+    const tabs = document.getElementById(tabGroup);
+    for (let i = 0; i < tabs.childElementCount; i++) {
+        if (tabs.children[i].classList.contains('active-tab')) {
+            tabs.children[i].classList.remove('active-tab');
+        }
+    }
+}
+
+makeTabActive = (clickInfo) => {
+    let element = event.target;
+    if(element.classList.contains('tab')) {
+        element.classList.add('active-tab');
+    }
+    txtTraitsSign.innerHTML = "Books " + element.innerHTML;
+}
+
+const allTabs = document.getElementsByClassName('tab');
+for (let i = 0; i < allTabs.length; i++) {
+    allTabs[i].addEventListener('click', makeTabActive);
+}

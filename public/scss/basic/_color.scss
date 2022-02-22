@@ -23,3 +23,11 @@ $light-main-color: lighten($main-color, 7%);
 
 $secondary-color: $main-blue;
 $dark-second-color: darken($secondary-color, 65%);
+
+.background-darker {
+    background-color: $main-color;
+}
+
+.background-lighter {
+    background-color: lighten($bg-light, 3%);
+}

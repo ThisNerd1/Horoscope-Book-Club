@@ -2,12 +2,12 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Inconsolata:wght@300&family=Irish+Grover&family=Zen+Kaku+Gothic+Antique&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Inconsolata:wght@300&family=Irish+Grover&family=Zen+Kaku+Gothic+Antique&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Inconsolata:wght@300&family=Irish+Grover&family=Zen+Kaku+Gothic+Antique&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Inconsolata:wght@300&family=Irish+Grover&family=Zen+Kaku+Gothic+Antique&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Inconsolata:wght@300&family=Irish+Grover&family=Zen+Kaku+Gothic+Antique&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Inconsolata:wght@300&family=Irish+Grover&family=Zen+Kaku+Gothic+Antique&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Irish+Grover&family=Raleway&family=Spectral:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Irish+Grover&family=Raleway&family=Spectral:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Irish+Grover&family=Raleway&family=Spectral:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Irish+Grover&family=Raleway&family=Spectral:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Irish+Grover&family=Raleway&family=Spectral:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Irish+Grover&family=Raleway&family=Spectral:wght@300&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,6 +56,14 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.background-darker {
+  background-color: #dacaff;
+}
+
+.background-lighter {
+  background-color: #f9f9f9;
 }
 
 .front {
@@ -608,13 +616,13 @@ table {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Crimson Text", Times, serif;
+  font-family: "Spectral", Times, serif;
   margin: 0.5rem;
   padding: 0.5rem;
 }
 
 p {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   margin: 0.5rem;
   padding: 0.5rem;
   line-height: normal;
@@ -728,11 +736,11 @@ ol > li {
 }
 
 .txt-font-header {
-  font-family: "Crimson Text", Times, serif !important;
+  font-family: "Spectral", Times, serif !important;
 }
 
 .txt-font-basic {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif !important;
+  font-family: "Raleway", Arial, sans-serif !important;
 }
 
 .txt-font-code {
@@ -1858,13 +1866,13 @@ ol > li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Crimson Text", Times, serif;
+  font-family: "Spectral", Times, serif;
   margin: 0.5rem;
   padding: 0.5rem;
 }
 
 p {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   margin: 0.5rem;
   padding: 0.5rem;
   line-height: normal;
@@ -1978,11 +1986,11 @@ ol > li {
 }
 
 .txt-font-header {
-  font-family: "Crimson Text", Times, serif !important;
+  font-family: "Spectral", Times, serif !important;
 }
 
 .txt-font-basic {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif !important;
+  font-family: "Raleway", Arial, sans-serif !important;
 }
 
 .txt-font-code {
@@ -1991,6 +1999,14 @@ ol > li {
 
 .txt-font-fun {
   font-family: "Irish Grover", Papyrus, fantasy !important;
+}
+
+.background-darker {
+  background-color: #dacaff;
+}
+
+.background-lighter {
+  background-color: #f9f9f9;
 }
 
 .tr-sq-larger {
@@ -2576,13 +2592,13 @@ ol > li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Crimson Text", Times, serif;
+  font-family: "Spectral", Times, serif;
   margin: 0.5rem;
   padding: 0.5rem;
 }
 
 p {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   margin: 0.5rem;
   padding: 0.5rem;
   line-height: normal;
@@ -2696,11 +2712,11 @@ ol > li {
 }
 
 .txt-font-header {
-  font-family: "Crimson Text", Times, serif !important;
+  font-family: "Spectral", Times, serif !important;
 }
 
 .txt-font-basic {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif !important;
+  font-family: "Raleway", Arial, sans-serif !important;
 }
 
 .txt-font-code {
@@ -2709,6 +2725,14 @@ ol > li {
 
 .txt-font-fun {
   font-family: "Irish Grover", Papyrus, fantasy !important;
+}
+
+.background-darker {
+  background-color: #dacaff;
+}
+
+.background-lighter {
+  background-color: #f9f9f9;
 }
 
 .front {
@@ -3260,6 +3284,14 @@ ol > li {
   width: 100%;
 }
 
+.background-darker {
+  background-color: #dacaff;
+}
+
+.background-lighter {
+  background-color: #f9f9f9;
+}
+
 .divider {
   height: 1px;
   background-color: #3d00ca;
@@ -3333,6 +3365,14 @@ ol > li {
 
 .border-dashed {
   border-style: dashed;
+}
+
+.background-darker {
+  background-color: #dacaff;
+}
+
+.background-lighter {
+  background-color: #f9f9f9;
 }
 
 .front {
@@ -3885,13 +3925,13 @@ ol > li {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Crimson Text", Times, serif;
+  font-family: "Spectral", Times, serif;
   margin: 0.5rem;
   padding: 0.5rem;
 }
 
 p {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   margin: 0.5rem;
   padding: 0.5rem;
   line-height: normal;
@@ -4005,11 +4045,11 @@ ol > li {
 }
 
 .txt-font-header {
-  font-family: "Crimson Text", Times, serif !important;
+  font-family: "Spectral", Times, serif !important;
 }
 
 .txt-font-basic {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif !important;
+  font-family: "Raleway", Arial, sans-serif !important;
 }
 
 .txt-font-code {
@@ -4020,8 +4060,16 @@ ol > li {
   font-family: "Irish Grover", Papyrus, fantasy !important;
 }
 
+.background-darker {
+  background-color: #dacaff;
+}
+
+.background-lighter {
+  background-color: #f9f9f9;
+}
+
 .button-dark {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   height: 35px;
   padding: 0.5rem;
   user-select: none;
@@ -4047,7 +4095,7 @@ ol > li {
 }
 
 .button-light {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   height: 35px;
   padding: 0.5rem;
   user-select: none;
@@ -4073,7 +4121,7 @@ ol > li {
 }
 
 .button-main {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   height: 35px;
   padding: 0.5rem;
   user-select: none;
@@ -4098,7 +4146,7 @@ ol > li {
 }
 
 .button-red {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   height: 35px;
   padding: 0.5rem;
   user-select: none;
@@ -4124,7 +4172,7 @@ ol > li {
 }
 
 .button-green {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   height: 35px;
   padding: 0.5rem;
   user-select: none;
@@ -4150,7 +4198,7 @@ ol > li {
 }
 
 .button-yellow {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   height: 35px;
   padding: 0.5rem;
   user-select: none;
@@ -4188,7 +4236,7 @@ ol > li {
   margin: auto;
 }
 .sml-button h1, .check-button h1, .q-button h1, .x-button h1, .sml-button h2, .check-button h2, .q-button h2, .x-button h2, .sml-button h3, .check-button h3, .q-button h3, .x-button h3, .sml-button h4, .check-button h4, .q-button h4, .x-button h4, .sml-button h5, .check-button h5, .q-button h5, .x-button h5, .sml-button h6, .check-button h6, .q-button h6, .x-button h6, .sml-button p, .check-button p, .q-button p, .x-button p {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   font-weight: 600;
   text-align: center;
 }
@@ -4291,6 +4339,14 @@ ol > li {
   border-top-right-radius: 5px;
 }
 
+.background-darker {
+  background-color: #dacaff;
+}
+
+.background-lighter {
+  background-color: #f9f9f9;
+}
+
 .badge, .badge-green, .badge-red, .badge-second, .badge-main, .badge-light, .badge-dark {
   width: max-content;
   height: max-content;
@@ -4350,6 +4406,14 @@ ol > li {
 
 .badge-pill {
   border-radius: 15px;
+}
+
+.background-darker {
+  background-color: #dacaff;
+}
+
+.background-lighter {
+  background-color: #f9f9f9;
 }
 
 .front {
@@ -5520,13 +5584,13 @@ table.bold-top tr:first-child {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Crimson Text", Times, serif;
+  font-family: "Spectral", Times, serif;
   margin: 0.5rem;
   padding: 0.5rem;
 }
 
 p {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   margin: 0.5rem;
   padding: 0.5rem;
   line-height: normal;
@@ -5640,11 +5704,11 @@ ol > li {
 }
 
 .txt-font-header {
-  font-family: "Crimson Text", Times, serif !important;
+  font-family: "Spectral", Times, serif !important;
 }
 
 .txt-font-basic {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif !important;
+  font-family: "Raleway", Arial, sans-serif !important;
 }
 
 .txt-font-code {
@@ -5653,6 +5717,14 @@ ol > li {
 
 .txt-font-fun {
   font-family: "Irish Grover", Papyrus, fantasy !important;
+}
+
+.background-darker {
+  background-color: #dacaff;
+}
+
+.background-lighter {
+  background-color: #f9f9f9;
 }
 
 form {
@@ -5681,7 +5753,7 @@ form div.row {
 }
 
 label {
-  font: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font: "Raleway", Arial, sans-serif, Arial, sans-serif;
   color: #004670;
   flex-basis: 1;
   width: max-content;
@@ -5711,7 +5783,7 @@ input[type=checkbox], button[type=checkbox] {
 }
 
 input[type=submit], button {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   font-size: 14pt;
   margin: 0 auto;
   background-color: #f3eeff;
@@ -5728,6 +5800,14 @@ button {
   border-radius: 3px;
   font-size: 12pt;
   flex-basis: 1;
+}
+
+.background-darker {
+  background-color: #dacaff;
+}
+
+.background-lighter {
+  background-color: #f9f9f9;
 }
 
 .front {
@@ -6280,13 +6360,13 @@ button {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Crimson Text", Times, serif;
+  font-family: "Spectral", Times, serif;
   margin: 0.5rem;
   padding: 0.5rem;
 }
 
 p {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   margin: 0.5rem;
   padding: 0.5rem;
   line-height: normal;
@@ -6400,11 +6480,11 @@ ol > li {
 }
 
 .txt-font-header {
-  font-family: "Crimson Text", Times, serif !important;
+  font-family: "Spectral", Times, serif !important;
 }
 
 .txt-font-basic {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif !important;
+  font-family: "Raleway", Arial, sans-serif !important;
 }
 
 .txt-font-code {
@@ -6569,7 +6649,7 @@ ol > li {
   width: 100%;
   margin: 1px;
   text-align: left;
-  font-family: "Crimson Text", Times, serif, Times, serif;
+  font-family: "Spectral", Times, serif, Times, serif;
   font-size: 15pt;
   border: none;
   outline: none;
@@ -6590,10 +6670,72 @@ ol > li {
   -webkit-transition: max-height 0.3s ease-out;
 }
 
+.tab-holder {
+  margin-left: 2.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.tab {
+  margin: 0;
+  padding: 0;
+  margin-right: 0.25rem;
+  margin-bottom: -0.85rem;
+  width: 20%;
+  height: 30px;
+  float: left;
+  border: 1px #3d00ca solid;
+  border-radius: 2px;
+  border-bottom: none;
+  padding: 0;
+  background-color: #d8d8d8;
+  z-index: 1;
+  position: relative;
+}
+.tab > p, .tab h1, .tab h2, .tab h3, .tab h4, .tab h5, .tab h6 {
+  margin-top: -0.5rem;
+  font-size: 14pt;
+  -youbkit-touch-callout: none;
+  /* iOS Safari */
+  -youbkit-user-select: none;
+  /* Chrome 6.0+, Safari 3.1+, Edge & Opera 15+ */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE 10+ and Edge */
+  user-select: none;
+}
+.tab.active-tab {
+  background-color: #f9f9f9;
+  z-index: 3;
+}
+
+.tab-under {
+  margin-left: 1rem;
+  width: 85%;
+  position: relative;
+  border: 1px #3d00ca solid;
+  padding: 0.5rem;
+  z-index: 2;
+}
+
+@media screen and (max-width: 600px) {
+  .tab {
+    width: 40%;
+  }
+
+  .tab-holder {
+    margin-left: 20px;
+  }
+
+  .tab-under {
+    margin-left: 20px !important;
+  }
+}
 html {
   background-color: #f1f1f1;
   color: #1c0766;
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   overflow-x: hidden;
 }
 
@@ -6661,14 +6803,6 @@ img {
   height: 30px;
 }
 
-.background-darker {
-  background-color: #dacaff;
-}
-
-.background-lighter {
-  background-color: #f9f9f9;
-}
-
 .hidden-div {
   background-color: #dacaff;
   display: none;
@@ -6711,11 +6845,11 @@ header {
   align-items: center;
 }
 header h1, header h2, header h3, header h4, header h5, header h6 {
-  font-family: "Crimson Text", Times, serif, Times, serif;
+  font-family: "Spectral", Times, serif, Times, serif;
   font-size: 20pt;
 }
 header p {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   font-size: 16pt;
 }
 header.header-light {
@@ -6737,11 +6871,11 @@ footer {
   width: 99%;
 }
 footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
-  font-family: "Crimson Text", Times, serif, Times, serif;
+  font-family: "Spectral", Times, serif, Times, serif;
   font-size: 16pt;
 }
 footer p {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   font-size: 12pt;
 }
 footer.footer-light {
@@ -6750,7 +6884,7 @@ footer.footer-light {
 }
 
 .nav-light {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   height: 60px;
   display: flex;
   flex-direction: row;
@@ -6798,7 +6932,7 @@ footer.footer-light {
 }
 
 .nav-dark {
-  font-family: "Zen Kaku Gothic Antique", Arial, sans-serif, Arial, sans-serif;
+  font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   height: 60px;
   display: flex;
   flex-direction: row;

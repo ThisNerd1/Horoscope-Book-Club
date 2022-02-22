@@ -83,13 +83,7 @@ img {
 }
 
 // Color edits
-.background-darker {
-    background-color: $main-color;
-}
 
-.background-lighter {
-    background-color: lighten($bg-light, 3%);
-}
 
 .hidden-div {
     background-color: $main-color;

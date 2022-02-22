@@ -9,25 +9,51 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>  
 </head>
 <body>
-    <header>
-        <div class='navbar nav-dark'>
-            <div class='item-holder'>
-                <p class='nav-title'>Astrology Book Club</p>
-                <p class='nav-item'>
-                    <a href="./index.html">Home</a>
-                </p>
-                <p class='nav-item'>
-                    <a href="./account.html">My Page</a>
-                </p>
-                <p class='nav-item active'>
-                    <a href="./search.html">Find a Book</a>
-                </p>
-            </div>
-            <a href="javascript:void(0);" class="nav-icon">
-                <i class="fa fa-bars"></i>
-            </a>
-    </header>
+    <div class="page-container">
+        <div class="content-wrap">
+            <header>
+                <div class='navbar nav-dark'>
+                    <div class='item-holder'>
+                        <p class='nav-title'>Astrology Book Club</p>
+                        <p class='nav-item'>
+                            <a href="./index.html">Home</a>
+                        </p>
+                        <p class='nav-item'>
+                            <a href="./account.html">My Page</a>
+                        </p>
+                        <p class='nav-item active'>
+                            <a href="./search.html">Find a Book</a>
+                        </p>
+                    </div>
+                    <a href="javascript:void(0);" class="nav-icon">
+                        <i class="fa fa-bars"></i>
+                    </a>
+            </header>
 
+            <section>
+                <div>
+                    <div class="tab-holder mt-3" id="tab-holder-1">
+                        <button onclick="changeTab('tab-holder-1')" class="tab active-tab txt-font-header">
+                            Matching Traits
+                        </button>
+                        <button onclick="changeTab('tab-holder-1')" class="tab txt-font-header">
+                            Liked by Sign
+                        </button>
+                    </div>
+                    <div class="tab-under mx-5 background-lighter">
+                        <h5 id="txt-traits-sign">Books Matching Traits</h5>
+                        <p>Book results here.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam, molestias commodi totam aliquid, non fuga nulla assumenda accusamus inventore aspernatur corrupti laborum neque mollitia aperiam cumque quasi ad iusto perspiciatis.</p>
+                    </div>
+                </div>
+            </section>
+
+            
+            <footer class="page-bottom">
+                <p>Copyright &copy; 2022</p>
+            </footer>
+        </div>
+    </div>
     <script src='main.js'></script>
 </body>
 </html>
