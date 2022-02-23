@@ -9,24 +9,67 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>  
 </head>
 <body>
-    <header>
-        <div class='navbar nav-dark'>
-            <div class='item-holder'>
-                <h3 class='nav-title'>Astrology Book Club</h3>
-                <p class='nav-item'>
-                    <a href="./index.html">Home</a>
-                </p>
-                <p class='nav-item active'>
-                    <a href="./account.html">My Page</a>
-                </p>
-                <p class='nav-item'>
-                    <a href="./search.html">Find a Book</a>
-                </p>
-            </div>
-            <a href="javascript:void(0);" class="nav-icon">
-                <i class="fa fa-bars"></i>
-            </a>
-    </header>
+    <div class="page-container">
+        <div class="content-wrap">
+            <header>
+                <div class='navbar nav-dark'>
+                    <div class='item-holder'>
+                        <h3 class='nav-title'>Astrology Book Club</h3>
+                        <p class='nav-item'>
+                            <a href="./index.html">Home</a>
+                        </p>
+                        <p class='nav-item active'>
+                            <a href="./account.html">My Page</a>
+                        </p>
+                        <p class='nav-item'>
+                            <a href="./search.html">Find a Book</a>
+                        </p>
+                    </div>
+                    <a href="javascript:void(0);" class="nav-icon">
+                        <i class="fa fa-bars"></i>
+                    </a>
+            </header>
+
+            <section class="px-2">
+                <div class="row stack-md mt-3">
+                    <div class="stack px-1 mt-0 col-9">
+                        <div class="m-0 border-all border-round background-lighter row w-100">
+                            <img class="no-img-style square-sm m-1" src="img/speech-bubble.png">
+                            <input type="text" class="w-100 mb-1 mr-1 p-1 txt-s-md" />
+                        </div>
+                        <div class="m-0 mb-2 mt-2 ml-2-md border-all border-round background-lighter w-100">
+                            <h2>Status</h2> 
+                            <p>You haven't posted anything.</p>
+                        </div>
+                    </div>
+                    <div class="stack ml-2 col-3 mt-0 center-x border-all border-round background-lighter">
+                        <img class="icon-circle" src="https://via.placeholder.com/250">
+                        <h3>Username</h3>
+                        <div class="stack my-0">
+                            <h6 class="m-0">Birthday: </h6>
+                            <p class="m-0">12-34-2000</p>
+                        </div>
+                        <div class="row my-1 height-h6">
+                            <h6>Sun Sign: </h6>
+                            <p>Aquarius</p>
+                        </div>
+                        <div class="row my-1 height-h6">
+                            <h6>Moon Sign: </h6>
+                            <p>Gemini</p>
+                        </div>
+                        <div class="row mt-1 mb-4 height-h6">
+                            <h6>Rising Sign: </h6>
+                            <p>Pisces</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="page-bottom">
+                <p>Copyright &copy; 2022</p>
+            </footer>
+        </div>
+    </div>
 
     <script src='main.js'></script>
 </body>
