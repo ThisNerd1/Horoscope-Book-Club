@@ -1,16 +1,12 @@
-fetch("https://daily-horoscopes1.p.rapidapi.com/", {
-	"method": "GET",
-	"headers": {
-		"x-rapidapi-key": "57417e0cd7msh9aeacf95c99c208p1320a5jsne3816a7b8eca",
-		"x-rapidapi-host": "daily-horoscopes1.p.rapidapi.com"
-	}
-})
-.then(response => {
-	console.log(response);
-})
-.catch(err => {
-	console.error(err);
-});
+// Fetch
+function fetchURL(url) {
+    fetch(url) //Grabs URL
+    .then(response => response.json()) //Converts response from API to JSON
+    .then(promise_data => {
+        //console.log(promise_data)
+        return promise_data;
+    });
+}
 
 // Dropdown Navbar
 const navButton = document.querySelector('.nav-icon');
@@ -38,11 +34,16 @@ const dropdown = () => {
 
 navButton.addEventListener('click', dropdown);
 
+
+// SEARCH CODE
 const txtTraitsSign = document.getElementById('txt-traits-sign');
 const resultsTraits = document.getElementById('results-matching-traits');
 const resultsLiked = document.getElementById('results-liked-by-sign');
-resultsLiked.style.display = 'none';
+if(resultsLiked != null) {
+    resultsLiked.style.display = 'none';
+}
 
+// switches the active tab with the tabgroup specified
 changeTab = (tabGroup) => {
     const tabs = document.getElementById(tabGroup);
     for (let i = 0; i < tabs.childElementCount; i++) {
@@ -52,6 +53,7 @@ changeTab = (tabGroup) => {
     }
 }
 
+// changes information using onClick element data
 makeTabActive = (clickInfo) => {
     let element = event.target;
     if(element.classList.contains('tab')) {
@@ -70,4 +72,90 @@ makeTabActive = (clickInfo) => {
 const allTabs = document.getElementsByClassName('tab');
 for (let i = 0; i < allTabs.length; i++) {
     allTabs[i].addEventListener('click', makeTabActive);
+}
+
+
+// HOROSCOPE CODE
+const horoscopeDiv = document.getElementById('horoscope-show');
+horoscopeDiv.style.display = 'none';
+
+const horoscopeText = document.getElementById("horoscope");
+const signText = document.getElementById("zodiac");
+
+let zodiac = {
+    sign: "Libra", //not case sensitive
+    index: 6 //used for getting the index for the sorting array, starting with aries=0, ending with pisces=11
+};
+
+const makeZodiacURL = (signName) => {
+    zodiacURL = `https://aztro.sameerkumar.website/?sign=${signName}&day=today`;
+}
+
+let allHoros = [];
+
+const getHoroscope = (signName) => {
+    makeZodiacURL(signName);
+    signText.textContent = zodiac.sign; //writes the sign on the page
+    fetch(zodiacURL, { //gets the horoscope content
+        method: 'POST'
+    })
+    .then(response => response.json())
+    .then(json => {
+        allHoros[allHoros.length] = json.description;
+    });
+}
+
+let zodiacs = ['Aquarius', 'Pisces', 'Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn'];
+
+for (let i = 0; i < zodiacs.length; i++) {
+    getHoroscope(zodiacs[i]);
+}
+
+const switchSign = (signName) => {
+    horoscopeDiv.style.display = 'block';
+    signText.textContent = signName;
+    switch (signName) {
+        case 'Aquarius':
+            horoscopeText.textContent = allHoros[0];
+            break;
+        case 'Pisces':
+            horoscopeText.textContent = allHoros[1];
+            break;
+        case 'Aries':
+            horoscopeText.textContent = allHoros[2];
+            break;
+        case 'Taurus':
+            horoscopeText.textContent = allHoros[3];
+            break;
+        case 'Gemini':
+            horoscopeText.textContent = allHoros[4];
+            break;
+        case 'Cancer':
+            horoscopeText.textContent = allHoros[5];
+            break;
+        case 'Leo':
+            horoscopeText.textContent = allHoros[6];
+            break;
+        case 'Virgo':
+            horoscopeText.textContent = allHoros[7];
+            break;
+        case 'Libra':
+            horoscopeText.textContent = allHoros[8];
+            break;
+        case 'Scorpio':
+            horoscopeText.textContent = allHoros[9];
+            break;
+        case 'Sagittarius':
+            horoscopeText.textContent = allHoros[10];
+            break;
+        case 'Capricorn':
+            horoscopeText.textContent = allHoros[11];
+            break;
+    }
+}
+
+const horoLinks = document.getElementsByClassName('switch-sign');
+for (let i = 0; i < horoLinks.length; i++) {
+    horoLinks[i].addEventListener('click', switchSign(horoLinks[i].textContent));
+    horoscopeDiv.style.display = 'none';
 }

@@ -7168,12 +7168,16 @@ ol > li {
     margin-left: 20px !important;
   }
 }
-.results-matching-traits {
+#results-matching-traits {
   display: block;
 }
 
-.results-liked-by-sign {
+#results-liked-by-sign {
   display: block;
+}
+
+#horoscope-show {
+  display: none;
 }
 
 html {
