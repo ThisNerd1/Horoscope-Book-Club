@@ -59,11 +59,15 @@ table {
 }
 
 .background-darker {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 
 .background-lighter {
   background-color: #f9f9f9;
+}
+
+.background-l-grey {
+  background-color: #f1f1f1;
 }
 
 .front {
@@ -2438,11 +2442,15 @@ ol > li {
 }
 
 .background-darker {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 
 .background-lighter {
   background-color: #f9f9f9;
+}
+
+.background-l-grey {
+  background-color: #f1f1f1;
 }
 
 .tr-sq-larger {
@@ -3164,11 +3172,15 @@ ol > li {
 }
 
 .background-darker {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 
 .background-lighter {
   background-color: #f9f9f9;
+}
+
+.background-l-grey {
+  background-color: #f1f1f1;
 }
 
 .front {
@@ -3721,21 +3733,25 @@ ol > li {
 }
 
 .background-darker {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 
 .background-lighter {
   background-color: #f9f9f9;
 }
 
+.background-l-grey {
+  background-color: #f1f1f1;
+}
+
 .divider {
   height: 1px;
-  background-color: #3d00ca;
+  background-color: black;
   padding: 0;
 }
 
 .border, .border-dashed, .border-dotted, .border-dark, .border-white, .border-black, .border-bottom-thick, .border-top-thick, .border-left-thick, .border-right-thick, .border-all-thick, .border-bottom, .border-top, .border-left, .border-right, .border-all {
-  border: 0 #3d00ca solid;
+  border: 0 #020007 solid;
   padding: 0.5rem;
 }
 
@@ -3804,11 +3820,15 @@ ol > li {
 }
 
 .background-darker {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 
 .background-lighter {
   background-color: #f9f9f9;
+}
+
+.background-l-grey {
+  background-color: #f1f1f1;
 }
 
 .front {
@@ -4497,11 +4517,15 @@ ol > li {
 }
 
 .background-darker {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 
 .background-lighter {
   background-color: #f9f9f9;
+}
+
+.background-l-grey {
+  background-color: #f1f1f1;
 }
 
 .button-dark {
@@ -4570,15 +4594,15 @@ ol > li {
   cursor: pointer;
   min-width: 120px;
   font-size: 14pt;
-  background-color: #c8b1ff;
-  color: #3d00ca;
-  border-color: #4c00fd;
+  background-color: #ccc1f1;
+  color: #1c0766;
+  border-color: #1c0766;
 }
 .button-main a {
   text-decoration: none;
 }
 .button-main:hover {
-  background-color: #cfbbff;
+  background-color: #aa97e8;
 }
 
 .button-red {
@@ -4740,12 +4764,12 @@ ol > li {
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  background-color: #c8b1ff;
-  border: 1px solid #4c00fd;
-  color: #3d00ca;
+  background-color: #15054e;
+  border: 1px solid black;
+  color: black;
 }
 .page-btn:hover, .page-btn-end:hover, .page-btn-start:hover, .page-btn-scnd:hover, .page-btn-end-scnd:hover, .page-btn-start-scnd:hover {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 
 .page-btn-scnd, .page-btn-end-scnd, .page-btn-start-scnd {
@@ -4776,11 +4800,15 @@ ol > li {
 }
 
 .background-darker {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 
 .background-lighter {
   background-color: #f9f9f9;
+}
+
+.background-l-grey {
+  background-color: #f1f1f1;
 }
 
 .badge, .badge-green, .badge-red, .badge-second, .badge-main, .badge-light, .badge-dark {
@@ -4811,7 +4839,7 @@ ol > li {
 
 .badge-main {
   border: 0px;
-  background-color: #b697ff;
+  background-color: #0f0436;
   color: white;
 }
 
@@ -4845,11 +4873,15 @@ ol > li {
 }
 
 .background-darker {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 
 .background-lighter {
   background-color: #f9f9f9;
+}
+
+.background-l-grey {
+  background-color: #f1f1f1;
 }
 
 .front {
@@ -5434,10 +5466,10 @@ table td {
   padding-right: 0.75rem;
 }
 table.alternate-colors tr:nth-child(2n) {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 table.bold-top tr:first-child {
-  background-color: #c1a6ff;
+  background-color: #130545;
 }
 
 .t-dark {
@@ -6156,21 +6188,25 @@ ol > li {
 }
 
 .background-darker {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 
 .background-lighter {
   background-color: #f9f9f9;
 }
 
+.background-l-grey {
+  background-color: #f1f1f1;
+}
+
 form {
-  background-color: #dacaff;
+  background-color: #1c0766;
   width: 50%;
   padding: 0.4rem;
   padding-top: 0.5rem;
   padding-bottom: 0.4rem;
   margin: 0.5rem;
-  border: 1px solid #4500e4;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
 }
@@ -6200,7 +6236,7 @@ input[type=text], button[type=text] {
   width: 80%;
   border: 1px solid #004670;
   border-radius: 3px;
-  background-color: #f3eeff;
+  background-color: #f1f1f1;
   flex-basis: 1;
   margin-top: 0.3rem;
   margin-left: 1rem;
@@ -6208,13 +6244,13 @@ input[type=text], button[type=text] {
 
 input[type=radio], button[type=radio] {
   margin-right: 0.5rem;
-  background-color: #f3eeff;
+  background-color: #250987;
   flex-basis: 1;
 }
 
 input[type=checkbox], button[type=checkbox] {
   margin-right: 0.5rem;
-  background-color: #f3eeff;
+  background-color: #250987;
   flex-basis: 1;
 }
 
@@ -6222,16 +6258,16 @@ input[type=submit], button {
   font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   font-size: 14pt;
   margin: 0 auto;
-  background-color: #f3eeff;
+  background-color: #250987;
   cursor: pointer;
   min-width: 20%;
-  border: 1px solid #4500e4;
+  border: 1px solid black;
   flex-basis: 1;
 }
 
 button {
   margin-bottom: 0.3rem;
-  background-color: #ece4ff;
+  background-color: #23097e;
   padding: 0.25rem;
   border-radius: 3px;
   font-size: 12pt;
@@ -6239,11 +6275,15 @@ button {
 }
 
 .background-darker {
-  background-color: #dacaff;
+  background-color: #1c0766;
 }
 
 .background-lighter {
   background-color: #f9f9f9;
+}
+
+.background-l-grey {
+  background-color: #f1f1f1;
 }
 
 .front {
@@ -6965,7 +7005,7 @@ ol > li {
   border-radius: 10px;
   margin: 0.5rem auto;
   padding: 20px;
-  border: 1px solid #3d00ca;
+  border: 1px solid black;
   color: #004670;
   width: 80%;
 }
@@ -7078,7 +7118,7 @@ ol > li {
 }
 
 .accordion {
-  background-color: #dacaff;
+  background-color: #1c0766;
   color: #444;
   cursor: pointer;
   padding: 0.5rem;
@@ -7092,14 +7132,14 @@ ol > li {
   transition: 0.4s;
 }
 .accordion.active, .accordion:hover {
-  background-color: #e5d9ff;
+  background-color: #200874;
 }
 
 .panel {
   margin: 0;
   font-size: 13pt;
   padding: 0 0.25rem;
-  background-color: white;
+  background-color: #300cae;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
@@ -7120,7 +7160,7 @@ ol > li {
   width: 20%;
   height: 35px;
   float: left;
-  border: 1px #3d00ca solid;
+  border: 1px black solid;
   border-radius: 2px;
   border-bottom: none;
   padding: 0;
@@ -7150,7 +7190,7 @@ ol > li {
   margin-left: 1rem;
   width: 85%;
   position: relative;
-  border: 1px #3d00ca solid;
+  border: 1px black solid;
   padding: 0.5rem;
   z-index: 2;
 }
@@ -7252,7 +7292,7 @@ img {
 }
 
 .hidden-div {
-  background-color: #dacaff;
+  background-color: #1c0766;
   display: none;
 }
 

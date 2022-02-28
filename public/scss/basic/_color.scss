@@ -4,6 +4,8 @@ $main-purple: rgb(218, 202, 255);
 $bg-light: rgb(241, 241, 241);
 $bg-dark: rgb(28, 7, 102);
 $dark-accent-color: darken($bg-dark, 20%);
+$light-accent-color: rgb(204, 193, 241);
+$bg-l-grey: rgb(241, 241, 241);
 
 $accent-red: rgb(255, 78, 78);
 $accent-green: rgb(170, 236, 170);
@@ -18,7 +20,7 @@ $txt-d-inactive: rgb(139, 139, 139);
 $txt-d-disabled: rgb(202, 202, 202);
 
 // Main colours
-$main-color: $main-purple;
+$main-color: $bg-dark;
 $light-main-color: lighten($main-color, 7%);
 
 $secondary-color: $main-blue;
@@ -30,4 +32,8 @@ $dark-second-color: darken($secondary-color, 65%);
 
 .background-lighter {
     background-color: lighten($bg-light, 3%);
+}
+
+.background-l-grey {
+    background-color: $bg-l-grey;
 }
