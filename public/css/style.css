@@ -832,8 +832,39 @@ ol > li {
   width: 100%;
 }
 
+.w-40 {
+  width: 40%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.square-sm {
+  width: 50px;
+  height: 50px;
+}
+
+.icon-circle {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+}
+
 .space-evenly {
   justify-content: space-evenly;
+}
+
+.space-between {
+  justify-content: space-between;
 }
 
 .center-x {
@@ -1733,29 +1764,6 @@ ol > li {
     padding-bottom: 3rem !important;
   }
 }
-.w-90 {
-  width: 90%;
-}
-
-.w-50 {
-  width: 50%;
-}
-
-.w-100 {
-  width: 100% !important;
-}
-
-.square-sm {
-  width: 50px;
-  height: 50px;
-}
-
-.icon-circle {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-}
-
 .front {
   z-index: 1;
 }
@@ -3750,6 +3758,10 @@ ol > li {
   padding: 0;
 }
 
+.border-none {
+  border: none;
+}
+
 .border, .border-dashed, .border-dotted, .border-dark, .border-white, .border-black, .border-bottom-thick, .border-top-thick, .border-left-thick, .border-right-thick, .border-all-thick, .border-bottom, .border-top, .border-left, .border-right, .border-all {
   border: 0 #020007 solid;
   padding: 0.5rem;
@@ -4709,6 +4721,7 @@ ol > li {
   transition: background-color 0.5s, width 0.5s, height 0.5s;
   -webkit-transition: background-color 0.5s, width 0.5s, height 0.5s;
   background-color: #df6e6e;
+  color: #660404;
   border: 1.5px #660404 solid;
 }
 .x-button:hover {
@@ -6200,12 +6213,11 @@ ol > li {
 }
 
 form {
-  background-color: #1c0766;
+  background-color: #fefefe;
   width: 50%;
   padding: 0.4rem;
   padding-top: 0.5rem;
   padding-bottom: 0.4rem;
-  margin: 0.5rem;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -6231,7 +6243,7 @@ label {
   width: max-content;
 }
 
-input[type=text], button[type=text] {
+input[type=text], button[type=text], input[type=password], button[type=password] {
   padding: 3px;
   width: 80%;
   border: 1px solid #004670;
@@ -6258,9 +6270,10 @@ input[type=submit], button {
   font-family: "Raleway", Arial, sans-serif, Arial, sans-serif;
   font-size: 14pt;
   margin: 0 auto;
-  background-color: #250987;
+  background-color: #f1f1f1;
   cursor: pointer;
   min-width: 20%;
+  padding: 0.25rem;
   border: 1px solid black;
   flex-basis: 1;
 }

@@ -7,6 +7,10 @@
     padding: 0;
 }
 
+.border-none {
+    border: none;
+}
+
 .border {
     border: 0 darken($main-color, 20%) solid;
     padding: $base-padding;

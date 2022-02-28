@@ -42,9 +42,39 @@ $base-width: 1/12 * 100%;
     }
 }
 
+// Widths
+.w-40 {
+    width: 40%;
+}
+.w-50 {
+    width: 50%;
+}
+.w-90 {
+    width: 90%;
+}
+.w-100 {
+    width: 100% !important;
+}
+
+// Square
+.square-sm {
+    width: 50px;
+    height: 50px;
+}
+
+.icon-circle {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+}
+
 // Spacing
 .space-evenly {
     justify-content: space-evenly;
+}
+
+.space-between {
+    justify-content: space-between;
 }
 
 // Align horizontally
@@ -212,25 +242,3 @@ $base-width: 1/12 * 100%;
     }
 }
 
-// Widths
-.w-90 {
-    width: 90%;
-}
-.w-50 {
-    width: 50%;
-}
-.w-100 {
-    width: 100% !important;
-}
-
-// Square
-.square-sm {
-    width: 50px;
-    height: 50px;
-}
-
-.icon-circle {
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-}

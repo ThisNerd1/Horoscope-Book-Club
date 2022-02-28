@@ -103,7 +103,18 @@
                     <span class="x-button close" onclick="closeModal('loginModal')">X</span>
                     <h3>Log in</h3> 
                     <div class="divider mx-3"></div>
-                    <button class="button-main center-x px-2" onclick="openModal('signupModal')">Sign Up</button>
+                    <form class="m-auto my-2 border-none p-1">
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold">Email:</label>
+                            <input type="text">
+                        </div>
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold">Password:</label>
+                            <input type="password">
+                        </div>
+                        <input type="submit" value="Log in" class="my-1">
+                    </form>
+                    <button class="button-main center-x px-2" onclick="openModal('signupModal')">Sign Up Instead</button>
                 </div>
             </div>
 
@@ -112,6 +123,25 @@
                     <span class="x-button close" onclick="closeModal('signupModal')">X</span>
                     <h3>Sign up</h3> 
                     <div class="divider mx-3"></div>
+                    <form class="m-auto my-2 border-none p-1">
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold">Name:</label>
+                            <input type="text">
+                        </div>
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold">Email:</label>
+                            <input type="text">
+                        </div>
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold mb-1">Birthday:</label>
+                            <input type="date">
+                        </div>
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold">Password:</label>
+                            <input type="password">
+                        </div>
+                        <input type="submit" value="Log in" class="my-1">
+                    </form>
                 </div>
             </div>
         
