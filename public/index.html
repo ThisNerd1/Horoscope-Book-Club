@@ -43,7 +43,7 @@
                             Meet some friends and enjoy some books together, or invite your friends to join! Maybe you'll 
                             discover some common interests that way!
                         </p>
-                        <p>Create or log into your account <a href=index.html>here</a> to get started.</p>
+                        <p>Create or log into your account <a href='#' onclick="openModal('loginModal')">here</a> to get started.</p>
                     </div>
                     <div class="col-4 mr-5 border-all border-round background-lighter">
                         <h3>Your Daily Horoscope</h3>
@@ -97,6 +97,21 @@
                     </div>
                 </div>
             </section>
+
+            <div id="loginModal" class="modal m-middle">
+                <div class="modal-content">
+                    <span class="x-button close" onclick="closeModal('loginModal')">X</span>
+                    <h3 class="border-bottom">Log in</h3> 
+                    <button class="button-main center-x px-2" onclick="openModal('signupModal')">Sign Up</button>
+                </div>
+            </div>
+
+            <div id="signupModal" class="modal m-middle">
+                <div class="modal-content">
+                    <span class="x-button close" onclick="closeModal('signupModal')">X</span>
+                    <h3 class="border-bottom">Sign up</h3> 
+                </div>
+            </div>
         
             <footer class="page-bottom">
                 <p>Copyright &copy; Crime Committers (Allegedly) 2022</p>
