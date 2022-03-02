@@ -33,7 +33,7 @@
             <section>
                 <div>
                     <div class="tab-holder mt-3" id="tab-holder-1">
-                        <button onclick="changeTab('tab-holder-1')" class="tab active-tab traits-pick">
+                        <button onclick="changeTab('tab-holder-1')" class="tab active-tab traits-pick" id="btn-search-traits">
                             Matching Traits
                         </button>
                         <button onclick="changeTab('tab-holder-1')" class="tab liked-pick">
@@ -48,7 +48,14 @@
                         </div>
                         <div class="ml-0" id="results-matching-traits">
                             <p>Results for matching traits.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore deserunt soluta debitis aut mollitia harum, quasi quos. Nesciunt, necessitatibus molestiae quisquam aperiam omnis distinctio asperiores voluptate dolorum cumque fugiat modi.</p>
+                            <div class="row stack-sm">
+                                <div id="book-cover" class="col-2 h-20"></div>
+                                <div class="stack col-9">
+                                    <p class="txt-w-semibold my-9">Book Name</p>   
+                                    <p class="my-0">Genre</p>
+                                    <p class="my-0">Description Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus sequi, reiciendis, ad est in, laudantium non mollitia esse quos inventore expedita sint nam magnam ipsa eius dicta. Pariatur, magnam adipisci.</p>
+                                </div>
+                            </div>
                         </div>
                         
                     </div>

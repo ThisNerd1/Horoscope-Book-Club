@@ -92,15 +92,12 @@ for (let i = 0; i < allTabs.length; i++) {
 
 // HOROSCOPE CODE
 const horoscopeDiv = document.getElementById('horoscope-show');
-horoscopeDiv.style.display = 'none';
+if(horoscopeDiv != null) {
+    horoscopeDiv.style.display = 'none';
+}
 
 const horoscopeText = document.getElementById("horoscope");
 const signText = document.getElementById("zodiac");
-
-let zodiac = {
-    sign: "Libra", //not case sensitive
-    index: 6 //used for getting the index for the sorting array, starting with aries=0, ending with pisces=11
-};
 
 const makeZodiacURL = (signName) => {
     zodiacURL = `https://aztro.sameerkumar.website/?sign=${signName}&day=today`;
@@ -110,7 +107,6 @@ let allHoros = [];
 
 const getHoroscope = (signName) => {
     makeZodiacURL(signName);
-    signText.textContent = zodiac.sign; //writes the sign on the page
     fetch(zodiacURL, { //gets the horoscope content
         method: 'POST'
     })
@@ -174,3 +170,65 @@ for (let i = 0; i < horoLinks.length; i++) {
     horoLinks[i].addEventListener('click', switchSign(horoLinks[i].textContent));
     horoscopeDiv.style.display = 'none';
 }
+
+
+// BOOK SEARCH STUFF
+const bookImg = document.getElementById("book-cover");
+
+let bookSearchURL = `https://openlibrary.org/search.json?q=title_suggest%3A%22vitamin+a%22`
+let bookURL = `https://openlibrary.org/works/OL45883W.json`;
+let coverURL = 'https://covers.openlibrary.org/b/id/6498519-L.jpg';
+
+// keywords
+const subjects = [
+    ["Competition","Ambition","Community life"], //Aires
+    ["Personal Beauty","Luxury","Loyalty"], //Taurus
+    ["Communication","Twins, fiction","Innovation","Kind"], //Gemini
+    ["Intuition","Compassion","Loyalty","Emotions, fiction"], //Cancer
+    ["Royalty","Ego","Loyalty"], //Leo
+    ["Perfection","Practice","Community life","Organization"], //Virgo
+    ["Balance","Design","Relaxation","Motivation"], //Libra
+    ["Clairvoyance","Intuition","Empathy","Ambition"], //Scorpio
+    ["Curiosities and wonders","Change","Knowledge"], //Sagittarius
+    ["Ambition","Responsibility","Motivation"], //Capricorn
+    ["Innovation","Humanitarianism","Surprise"], //Aquarius
+    ["Imagination","Empathy","Emotions"], //Pisces
+];
+
+let zodiac = {
+    sign: "Libra", //not case sensitive
+    index: 6 //used for getting the index for the sorting array, starting with aries=0, ending with pisces=11
+};
+
+const getBookData = () => {
+    let searchSubject = subjects[zodiac.index][Math.floor(Math.random()*subjects[zodiac.index].length)]; //picks a random one of the possible subjects for that zodiac
+    bookSearchURL = `https://openlibrary.org/search.json?q=subject%3A(%22Fiction%22+AND+%22${searchSubject}%22)` //makes the url for searching for that subject
+    console.log(bookSearchURL);
+    fetch(bookSearchURL) //Grabs URL
+    .then(response => response.json()) //Converts response from API to JSON
+    .then(searchData => {
+        console.log(searchData)
+        getBook(searchData); //sends the search output to the next step
+    });
+    
+}
+
+const getBook = (searchData) => {
+    let work = searchData.docs[Math.floor(Math.random()*searchData.docs.length)].key //the api only shows the first 100 of the search, so I choose one of those at random
+    bookURL = `https://openlibrary.org${work}.json`; //makes the url for getting that specific work
+    fetch(bookURL)
+    .then(response => response.json())
+    .then(bookData => {
+        getBookCover(bookData); //sends the book details to the next step
+    });
+}
+
+//overall just gets the cover from the api and makes an img tag to throw it in
+const getBookCover = (bookData) => {
+    let coverId = bookData.covers[0];
+    coverURL = `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`
+    bookImg.innerHTML = `<img src=${coverURL} />`
+}
+
+//starts the steps to get the book showing by button press
+var evt = document.getElementById("btn-search-traits").addEventListener('click',getBookData);

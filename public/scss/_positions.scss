@@ -40,6 +40,12 @@ $base-width: 1/12 * 100%;
     .col-#{$i} {
         width: $base-width * $i;
     }
+    // specific to this project
+    .down-col-#{$i} {
+        >img {
+            width: $base-width * $i;
+        }
+    }
 }
 
 // Widths
