@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import dateFormat, { masks } from "dateformat";
 import mongoose from "mongoose";
+=======
+
+const mongoose = require('mongoose');
+>>>>>>> a34474877b685b949df6a9c87e9b226f44a7cb19
 
 mongoose.Promise = global.Promise;
 
@@ -40,10 +45,13 @@ const users = mongoose.model('users', userSchema);
 //     console.log(error); // Failure
 // });
 
+<<<<<<< HEAD
 // users.updateOne({
 
 // })
 
+=======
+>>>>>>> a34474877b685b949df6a9c87e9b226f44a7cb19
 
 // create an account
 // const User = new users({ 
