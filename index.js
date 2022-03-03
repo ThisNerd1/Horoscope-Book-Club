@@ -1,15 +1,18 @@
-// import express from "express";
-// import expressSession from 'express-session';
-// import path from "path";
+const express = require('express');
+const routes = require('./routes/routes');
+const path = require('path');
+const cookieParser = require('cookie-parser');
 
-// const app = express();
+const app = express();
 
-// app.use(express.static(path.join(__dirname, 'public')));
-// app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+app.use(cookieParser());
 
-// let urlendcodedParser  = express.urlencoded({extended: false});
+let urlencodedParser = express.urlencoded({
+    extended: false
+});
 
+//app.get('/', routes.index);
+//app.get('/create', routes.create);
 
-// //nodemon
-
-// app.listen(3000);
+app.listen(3000);
