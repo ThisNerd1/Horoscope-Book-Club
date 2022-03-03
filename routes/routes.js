@@ -56,3 +56,31 @@ const users = mongoose.model('users', userSchema);
 
 //This works it saves data to mongo compass.
 //terminal line ---node public/routes/routes.js
+
+
+// not connected yet
+const neo4j = require('neo4j-driver')
+
+const user = 'neo4j';
+const password = 'cq6HGzXHJ_dNNS3uzWhUzjjT2yunHaWtrcEvrCvElv8';
+
+const driver = neo4j.driver(uri, neo4j.auth.basic(user, password))
+const session = driver.session()
+const personName = 'Alice'
+
+try {
+    const result = session.run(
+    'CREATE (a:Person {name: $name}) RETURN a',
+    { name: personName }
+    )
+
+    const singleRecord = result.records[0]
+    const node = singleRecord.get(0)
+
+    console.log(node.properties.name)
+} finally {
+    await session.close()
+}
+
+// on application exit:
+await driver.close()

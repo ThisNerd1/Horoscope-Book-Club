@@ -231,4 +231,6 @@ const getBookCover = (bookData) => {
 }
 
 //starts the steps to get the book showing by button press
-var evt = document.getElementById("btn-search-traits").addEventListener('click',getBookData);
+if(document.getElementById("btn-search-traits") != null) {
+    var evt = document.getElementById("btn-search-traits").addEventListener('click',getBookData);
+}
