@@ -103,14 +103,14 @@
                     <span class="x-button close" onclick="closeModal('loginModal')">X</span>
                     <h3>Log in</h3> 
                     <div class="divider mx-3"></div>
-                    <form class="m-auto my-2 border-none p-1">
+                    <form class="m-auto my-2 border-none p-1" method = "post" action="http://localhost:3000/loginAcc">
                         <div class="row stack-xs space-between">
                             <label class="txt-w-semibold">Email:</label>
-                            <input type="text">
+                            <input type="text" name = "email" id = "email">
                         </div>
                         <div class="row stack-xs space-between">
                             <label class="txt-w-semibold">Password:</label>
-                            <input type="password">
+                            <input type="password" name = "password" id = "password">
                         </div>
                         <input type="submit" value="Log in" class="my-1">
                     </form>
@@ -126,19 +126,19 @@
                     <form class="m-auto my-2 border-none p-1">
                         <div class="row stack-xs space-between">
                             <label class="txt-w-semibold">Name:</label>
-                            <input type="text">
+                            <input type="text"name = "name" id = "name">
                         </div>
                         <div class="row stack-xs space-between">
                             <label class="txt-w-semibold">Email:</label>
-                            <input type="text">
+                            <input type="text" name = "email" id = "email">
                         </div>
                         <div class="row stack-xs space-between">
                             <label class="txt-w-semibold mb-1">Birthday:</label>
-                            <input type="date">
+                            <input type="date" name = "birthday" id = "birthday">
                         </div>
                         <div class="row stack-xs space-between">
                             <label class="txt-w-semibold">Password:</label>
-                            <input type="password">
+                            <input type="password" name = "password" id = "password">
                         </div>
                         <input type="submit" value="Sign up" class="my-1">
                     </form>
