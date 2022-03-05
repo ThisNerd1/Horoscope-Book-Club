@@ -1,11 +1,11 @@
 const express = require( "express");
+const routes = require("./routes/routes.js");
 // const expressSession from 'express-session';
 const path = require( "path");
 const bodyParser = require("body-parser");
+const { resetWatchers } = require("nodemon/lib/monitor/watch");
 
 const app = express();
-
-app.set('views',__dirname+ '/views');
 // console.log(__dirname);
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
@@ -17,16 +17,10 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-Width, Content-Type, Accept')
     next();
 });
-app.post("/loginAcc", urlendcodedParser, (req, res) => {
-    console.log(req.body.password);
-    console.log(req.body.email);
-    res.sendFile(__dirname + "/views/login.html")
+app.post("/loginAcc", urlendcodedParser,routes.loginUser ,(req, res) => {
+    res.sendFile(__dirname + "/public/account.html")
 });
-app.post("/signUpAcc", urlendcodedParser, (req, res) => {
-    console.log(req.body.name);
-    console.log(req.body.birthday);
-    console.log(req.body.password);
-    console.log(req.body.email);
-    res.sendFile(__dirname + "/views/sign-up.html")
+app.post("/signUpAcc", urlendcodedParser, routes.createUser, (req, res) => {
+    res.sendFile(__dirname + "/public/index.html");
 });
 app.listen(3000);
