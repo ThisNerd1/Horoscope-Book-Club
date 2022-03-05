@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 const express = require( "express");
 const routes = require("./routes/routes.js");
 // const expressSession from 'express-session';
 const path = require( "path");
+=======
+const express = require('express');
+// const routes = require('./routes/routes');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+>>>>>>> 3b80d4555cd2a9ed811af336f9ec3ee655a52b9d
 const bodyParser = require("body-parser");
 const { resetWatchers } = require("nodemon/lib/monitor/watch");
 
