@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-const mongoose = require('mongoose');
-const bcrypt = require("bcryptjs");
-=======
 import dateFormat, { masks } from "dateformat";
 import mongoose from "mongoose";
 const mongoose = require('mongoose');
->>>>>>> 3b80d4555cd2a9ed811af336f9ec3ee655a52b9d
 
 mongoose.Promise = global.Promise;
 
@@ -37,13 +32,6 @@ const users = mongoose.model('users', userSchema);
 //     console.log(error); // Failure
 // });
 
-<<<<<<< HEAD
-// users.updateOne({
-
-// })
-
-=======
->>>>>>> 3b80d4555cd2a9ed811af336f9ec3ee655a52b9d
 
 //create an account
 exports.createUser = (req, res, next) => {
