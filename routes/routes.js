@@ -1,8 +1,5 @@
 const mongoose = require('mongoose');
 const bcrypt = require("bcryptjs");
-import dateFormat, { masks } from "dateformat";
-import mongoose from "mongoose";
-const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
 
@@ -82,28 +79,28 @@ exports.loginUser = (req, res, next) => {
 
 
 // not connected yet
-const neo4j = require('neo4j-driver')
+// const neo4j = require('neo4j-driver')
 
-const user = 'neo4j';
-const password = 'cq6HGzXHJ_dNNS3uzWhUzjjT2yunHaWtrcEvrCvElv8';
+// const user = 'neo4j';
+// const password = 'cq6HGzXHJ_dNNS3uzWhUzjjT2yunHaWtrcEvrCvElv8';
 
-const driver = neo4j.driver(uri, neo4j.auth.basic(user, password))
-const session = driver.session()
-const personName = 'Alice'
+// const driver = neo4j.driver(uri, neo4j.auth.basic(user, password))
+// const session = driver.session()
+// const personName = 'Alice'
 
-try {
-    const result = session.run(
-    'CREATE (a:Person {name: $name}) RETURN a',
-    { name: personName }
-    )
+// try {
+//     const result = session.run(
+//     'CREATE (a:Person {name: $name}) RETURN a',
+//     { name: personName }
+//     )
 
-    const singleRecord = result.records[0]
-    const node = singleRecord.get(0)
+//     const singleRecord = result.records[0]
+//     const node = singleRecord.get(0)
 
-    console.log(node.properties.name)
-} finally {
-    await session.close()
-}
+//     console.log(node.properties.name)
+// } finally {
+//     session.close()
+// }
 
-// on application exit:
-await driver.close()
+// // on application exit:
+// driver.close()
