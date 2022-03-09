@@ -233,12 +233,16 @@ const getBook = (searchData) => {
 //overall just gets the cover from the api and makes an img tag to throw it in
 const getBookCover = (bookData) => {
     let coverId;
+    let coverURL;
     if(bookData.covers != null) {
         coverId = bookData.covers[0];
+        coverURL = `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`
     } else {
+        let titleAry = bookData.title.split();
+        let titleTxt = titleAry.join('+');
+        coverURL = 'https://via.placeholder.com/120x200?text=Title';
         getBookData();
     }
-    coverURL = `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`
 
     let desc;
         if(bookData.description != null) {
