@@ -207,10 +207,15 @@ const getBookData = () => {
     fetch(bookSearchURL) //Grabs URL
     .then(response => response.json()) //Converts response from API to JSON
     .then(searchData => {
-        console.log(searchData)
         getBook(searchData); //sends the search output to the next step
     });
     
+}
+
+const bookHolder = document.getElementById('book-holder');
+
+for(let i = 0; i < 6; i++) {
+    getBookData();
 }
 
 const getBook = (searchData) => {
@@ -219,15 +224,44 @@ const getBook = (searchData) => {
     fetch(bookURL)
     .then(response => response.json())
     .then(bookData => {
+        console.log("bookdata:")
+        console.log(bookData)
         getBookCover(bookData); //sends the book details to the next step
     });
 }
 
 //overall just gets the cover from the api and makes an img tag to throw it in
 const getBookCover = (bookData) => {
-    let coverId = bookData.covers[0];
+    let coverId;
+    if(bookData.covers != null) {
+        coverId = bookData.covers[0];
+    } else {
+        getBookData();
+    }
     coverURL = `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`
-    bookImg.innerHTML = `<img src=${coverURL} />`
+
+    let desc;
+        if(bookData.description != null) {
+            if(bookData.description.value != null) {
+                desc = bookData.description.value;
+            } else {
+                desc = bookData.description;
+            }
+        } else {
+            desc = "No description could be loaded.";
+        }
+        bookHolder.innerHTML += `
+        <div class="row stack-sm stack-rv">
+            <div class="col-2 h-20">
+                <img src=${coverURL} />
+            </div>
+            <div class="stack col-9">
+                <p class="txt-w-semibold my-9" id="title">${bookData.title}</p>   
+                <p class="my-0">${bookData.subjects[0]}</p>
+                <p class="my-0">${desc}</p>
+            </div>
+        </div>
+        `
 }
 
 //starts the steps to get the book showing by button press

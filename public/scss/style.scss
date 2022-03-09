@@ -306,6 +306,9 @@ footer {
         &.stack-rv {
             flex-direction: column-reverse;
         }
+        &.row-rv {
+            flex-direction: row-reverse;
+        }
     }
     .row-lg {
         display: flex;
@@ -387,6 +390,9 @@ footer {
         }
         &.stack-rv {
             flex-direction: column-reverse;
+        }
+        &.row-rv {
+            flex-direction: row-reverse;
         }
     }
     .row-md {
@@ -504,6 +510,9 @@ footer {
         &.stack-rv {
             flex-direction: column-reverse;
         }
+        &.row-rv {
+            flex-direction: row-reverse;
+        }
     }
     .row-sm {
         display: flex;
@@ -582,6 +591,9 @@ footer {
         }
         &.stack-rv {
             flex-direction: column-reverse;
+        }
+        &.row-rv {
+            flex-direction: row-reverse;
         }
     }
     .row-xs {

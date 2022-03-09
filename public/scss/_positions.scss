@@ -32,6 +32,11 @@ $base-width: 1/12 * 100%;
     flex-direction: row;
 }
 
+.row-rv {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .parent-height {
     flex-grow: 1;
 }
