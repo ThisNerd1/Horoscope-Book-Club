@@ -775,6 +775,15 @@ ol > li {
   height: 20px;
 }
 
+.h-fit {
+  height: fit-content;
+}
+
+.mh-20 {
+  max-height: 150px;
+  width: auto;
+}
+
 .row {
   display: flex;
   flex-direction: row;

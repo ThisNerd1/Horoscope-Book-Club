@@ -23,6 +23,15 @@ $base-padding: .5rem;
     height: 20px;
 }
 
+.h-fit {
+    height: fit-content;
+}
+
+.mh-20 {
+    max-height: 150px;
+    width: auto;
+}
+
 
 // Columns
 $base-width: 1/12 * 100%;

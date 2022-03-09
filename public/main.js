@@ -251,9 +251,9 @@ const getBookCover = (bookData) => {
             desc = "No description could be loaded.";
         }
         bookHolder.innerHTML += `
-        <div class="row stack-sm stack-rv">
-            <div class="col-2 h-20">
-                <img src=${coverURL} />
+        <div class="row stack-sm stack-rv h-fit">
+            <div class="col-2 mh-20">
+                <img class="mh-20" src=${coverURL} />
             </div>
             <div class="stack col-9">
                 <p class="txt-w-semibold my-9" id="title">${bookData.title}</p>   
