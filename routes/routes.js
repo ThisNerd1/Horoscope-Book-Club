@@ -31,6 +31,15 @@ const users = mongoose.model('users', userSchema);
 //     console.log(error); // Failure
 // });
 
+exports.deleteUser = (req, res, next) => {
+    const User = new users({ 
+        Name: req.body.name, 
+        password: hash, 
+        birthDate: req.body.birthday,
+        email: req.body.email
+    });
+}
+
 //create an account
 exports.createUser = (req, res, next) => {
     let salt = bcrypt.genSaltSync(10);
@@ -42,15 +51,12 @@ exports.createUser = (req, res, next) => {
         email: req.body.email
     });
     User.save();
-    
     next();
 }
 
 exports.loginUser = (req, res, next) => {
-    
     let email = req.body.Email;
     let password = req.body.Password;
-    
     
     users.find({
         "email": email
@@ -66,10 +72,12 @@ exports.loginUser = (req, res, next) => {
             }
         }
     });
-    
-    
-    
 }
+
+// exports.editUser = (req, res) => {
+//     let email = req.body.Email;
+//     let password = req.body.Password;
+// }
 
 
 // console.log(User);
@@ -99,8 +107,8 @@ exports.loginUser = (req, res, next) => {
 
 //     console.log(node.properties.name)
 // } finally {
-//     session.close()
+//     await session.close()
 // }
 
 // // on application exit:
-// driver.close()
+// await driver.close()
