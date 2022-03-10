@@ -1,9 +1,5 @@
 const mongoose = require('mongoose');
 const bcrypt = require("bcryptjs");
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 mongoose.Promise = global.Promise;
 
@@ -81,10 +77,6 @@ exports.loginUser = (req, res, next) => {
 // exports.editUser = (req, res) => {
 //     let email = req.body.Email;
 //     let password = req.body.Password;
-<<<<<<< Updated upstream
-=======
-     
->>>>>>> Stashed changes
 // }
 
 

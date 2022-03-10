@@ -272,3 +272,26 @@ const getBookCover = (bookData) => {
 if(document.getElementById("btn-search-traits") != null) {
     var evt = document.getElementById("btn-search-traits").addEventListener('click',getBookData);
 }
+
+
+/// ACCOUNT STUFF
+// sign up
+if (document.getElementById('btn-sign-up')) {
+    document.getElementById('btn-sign-up').addEventListener('click', () => {
+        let name = document.getElementById('name').value;
+        let password = document.getElementById('password').value;
+        let birthday = document.getElementById('birthday').value;
+        let email = document.getElementById('email').value;
+        let url = `/signUpAcc?name=${name}&password=${password}&birthday=${birthday}&email=${email}`;
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (this.readyState != 4) return;
+
+            if (this.status == 200) {
+                var data = JSON.parse(this.responseText);
+            }
+        };
+        xhr.open('GET', url, true);
+        xhr.send();
+    });
+}
