@@ -30,10 +30,13 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-Width, Content-Type, Accept')
     next();
 });
+
 app.post("/loginAcc", urlendcodedParser,routes.loginUser ,(req, res) => {
     res.sendFile(__dirname + "/public/account.html")
 });
+
 app.post("/signUpAcc", urlendcodedParser, routes.createUser, (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
+
 app.listen(3000);
