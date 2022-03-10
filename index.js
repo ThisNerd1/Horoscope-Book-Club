@@ -4,7 +4,7 @@ const path = require( "path");
 const cookieParser = require('cookie-parser');
 const bodyParser = require("body-parser");
 const { resetWatchers } = require("nodemon/lib/monitor/watch");
-
+let email = "";
 const app = express();
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
@@ -17,7 +17,7 @@ app.use(expressSession({
 }));
 
 const checkAuth = (req, res, next) => {
-    if(req.session.email == req.body.email && req.session.isAuthenticated){
+    if(req.session.user && req.session.user.isAuthenticated){
         next();
     }else{
         res.sendFile(__dirname +'/public/index.html', {errormessage : 'You are not logged in yet! '});
@@ -33,6 +33,7 @@ app.use((req, res, next) => {
 });
 
 app.post("/loginAcc", urlendcodedParser,routes.loginUser ,(req, res) => {
+    email=req.body.email;
     req.session.user = {
         isAuthenticated : true,
         email : req.body.email
@@ -53,4 +54,5 @@ app.get("/accPage", urlendcodedParser, checkAuth, (req, res)=>{
 // app.post("/editAcc", urlendcodedParser, routes.editUser, (req, res) => {
 //     res.sendFile(__dirname + "/public/account.html");
 // });
+app.get("/getInfo", checkAuth, routes.getInfo)
 app.listen(3000);

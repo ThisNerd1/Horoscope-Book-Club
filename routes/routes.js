@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require("bcryptjs");
+const expressSession = require('express-session');
+const { json } = require('body-parser');
 
 mongoose.Promise = global.Promise;
 
@@ -15,11 +17,11 @@ mdb.once('open', callback => {});
 let userSchema = new mongoose.Schema({
     Name: String, //visible name that others see, defaults to same as username
     password: String, //hashed one is saved
-    birthDate: Date,
-    email: String
-    // starSign: String, 
-    // moonSign: String,
-    // risingSign: String
+    birthDate: String,
+    email: String,
+    sunSign: String, 
+    moonSign: String,
+    risingSign: String
     //[possibly other details for page customisation]
 }); 
 const users = mongoose.model('users', userSchema);
@@ -28,16 +30,70 @@ const users = mongoose.model('users', userSchema);
 exports.createUser = (req, res, next) => {
     let salt = bcrypt.genSaltSync(10);
     let hash = bcrypt.hashSync(req.body.password, salt);
+    
+    let birthday = req.body.birthDate;
+    // let year = birthday.substring(0, 4);
+    // let month = birthday.substring(5, 7);
+    // let day = birthday.substring(8, 10);
+    // let finalBirthday = "";
+    // switch(month){
+    //     case "01":
+    //         finalBirthday = finalBirthday + "January" + ` ${day}, ${year}` ;
+    //         break;
+    //         case "01":
+    //         finalBirthday = finalBirthday + "February" + ` ${day}, ${year}`;
+    //         break;
+    //         case "01":
+    //         finalBirthday = finalBirthday + "March" + ` ${day}, ${year}`;
+    //         break;
+    //         case "01":
+    //         finalBirthday = finalBirthday + "April" + ` ${day}, ${year}`;
+    //         break;
+    //         case "01":
+    //         finalBirthday = finalBirthday + "May" + ` ${day}, ${year}`;
+    //         break;
+    //         case "01":
+    //         finalBirthday = finalBirthday + "June" + ` ${day}, ${year}`;
+    //         break;
+    //         case "01":
+    //         finalBirthday = finalBirthday + "July"+ ` ${day}, ${year}`;
+    //         break;
+    //         case "08":
+    //         finalBirthday = finalBirthday + "August"+ ` ${day}, ${year}`;
+    //         break;
+    //         case "09":
+    //         finalBirthday = finalBirthday + "September"+ ` ${day}, ${year}`;
+    //         break;
+    //         case "10":
+    //         finalBirthday = finalBirthday + "October"+ ` ${day}, ${year}`;
+    //         break;
+    //         case "11":
+    //         finalBirthday = finalBirthday + "November"+ ` ${day}, ${year}`;
+    //         break;
+    //         case "12":
+    //         finalBirthday = finalBirthday + "December"+ ` ${day}, ${year}`;
+    //         break;
+        
+    // }
     const User = new users({ 
         Name: req.body.name, 
         password: hash, 
         birthDate: req.body.birthday,
-        email: req.body.email
+        email: req.body.email,
+        sunSign: req.body.sunSign, 
+        moonSign: req.body.moonSign,
+        risingSign: req.body.risingSign
     });
     User.save();
     next();
 }
-
+exports.getInfo = (req,res) => {
+    console.log("This is in the getInfo Page: " + req.session.email)
+        users.findOne({email: req.session.user.email}, (err, obj)=>{
+            console.log(obj)
+            res.json(obj)
+        } )
+}
 exports.loginUser = (req, res, next) => {
     let email =  req.body.email;
     let password =  req.body.password;
@@ -47,7 +103,6 @@ exports.loginUser = (req, res, next) => {
         users.findOne({
         email: email
     }, (err, obj) => {
-        // console.log(obj[0].Password);
         if(obj == null){
             console.log("I'm sorry we couldn't find that user, please try again.")
         }else{
