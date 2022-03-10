@@ -16,12 +16,12 @@ app.use(expressSession({
 }));
 
 const checkAuth = (req, res, next) => {
-    if(req.session.user && req.session.user.isAuthenticated) {
+    if(req.session.user && req.session.user.isAuthenticated){
         next();
-    } else {
-        res.redirect('/');
+    }else{
+        res.redirect('/public/index.html');
     }
-};
+}
 
 let urlendcodedParser  = bodyParser.urlencoded({extended: false});
 app.use(express.static(path.join(__dirname , 'public')));
@@ -38,5 +38,4 @@ app.post("/loginAcc", urlendcodedParser,routes.loginUser ,(req, res) => {
 app.post("/signUpAcc", urlendcodedParser, routes.createUser, (req, res) => {
     res.sendFile(__dirname + "/public/index.html");
 });
-
 app.listen(3000);

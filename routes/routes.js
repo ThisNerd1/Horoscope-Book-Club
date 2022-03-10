@@ -59,7 +59,7 @@ exports.loginUser = (req, res, next) => {
     const email = {email : req.body.Email}
     users.find(email, (err,user) => {
         if(err) return console.error(err);
-        console.log(user);
+        console.log(email);
         //console.log(bcrypt.compareSync(req.body.password, user.password))
         console.log(user[0].email);
         if(bcrypt.compareSync(req.body.password, user[0].password))
@@ -69,9 +69,6 @@ exports.loginUser = (req, res, next) => {
                 email: req.body.email
             }
             next();
-        }
-        else{
-            res.redirect('/');
         }
     })
 }
