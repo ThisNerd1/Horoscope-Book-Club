@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const bcrypt = require("bcryptjs");
 
+
 mongoose.Promise = global.Promise;
 
 mongoose.connect('mongodb+srv://admin2:Pass112@cluster0.o4mbh.mongodb.net/test', {
@@ -31,14 +32,14 @@ const users = mongoose.model('users', userSchema);
 //     console.log(error); // Failure
 // });
 
-exports.deleteUser = (req, res, next) => {
-    const User = new users({ 
-        Name: req.body.name, 
-        password: hash, 
-        birthDate: req.body.birthday,
-        email: req.body.email
-    });
-}
+// exports.deleteUser = (req, res, next) => {
+//     const User = new users({ 
+//         Name: req.body.name, 
+//         password: hash, 
+//         birthDate: req.body.birthday,
+//         email: req.body.email
+//     });
+// }
 
 //create an account
 exports.createUser = (req, res, next) => {
@@ -55,29 +56,53 @@ exports.createUser = (req, res, next) => {
 }
 
 exports.loginUser = (req, res, next) => {
-    let email = req.body.Email;
-    let password = req.body.Password;
-    
-    users.find({
-        "email": email
-    }, (err, obj)=>{
-        console.log(obj[0].password)
-        if(obj == null){
-            console.log("I'm sorry we couldn't find that user, please try again.")
-        }else{
-            if(!bcrypt.compareSync(password, obj[0].password)){
-                console.log("I'm sorry we couldn't find that user, please re-enter your password.")
-            }else{
-                next();
+    const email = {email : req.body.Email}
+    users.find(email, (err,user) => {
+        if(err) return console.error(err);
+        console.log(user);
+        //console.log(bcrypt.compareSync(req.body.password, user.password))
+        console.log(user[0].email);
+        if(bcrypt.compareSync(req.body.password, user[0].password))
+        {
+            req.session.user = {
+                isAuthenticated: true,
+                email: req.body.email
             }
+            next();
         }
-    });
+        else{
+            res.redirect('/');
+        }
+    })
 }
 
-// exports.editUser = (req, res) => {
-//     let email = req.body.Email;
-//     let password = req.body.Password;
+    
+//     users.find({
+//         "email": email
+//     }, (err, obj)=>{
+//         // console.log(obj[0].Password);
+//         if(obj == null){
+//             console.log("I'm sorry we couldn't find that user, please try again.")
+//         }else{
+//             if(!bcrypt.compareSync(password, obj[0].password)){
+//                 console.log("I'm sorry we couldn't find that user, please re-enter your password.")
+//             }else{
+//                 next();
+//             }
+//         }
+//     });
 // }
+
+exports.editUser = (req, res) => {
+    let email = req.body.email;
+    let password = req.body.password;
+    users.updateOne({email: email, password: password}, {
+        email : req.body.Email,
+        password : req.body.password
+    })
+    users.save();
+    next();
+}
 
 
 // console.log(User);
