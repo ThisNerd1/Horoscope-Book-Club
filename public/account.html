@@ -42,7 +42,29 @@
                             <p>You haven't posted anything.</p>
                         </div>
                     </div>
+                    <p>Edit account<a href='#' onclick="openModal('loginModal')">here </a></p>
+                    <div id="loginModal" class="modal m-middle">
+                        <div class="modal-content background-lighter w-50">
+                            <span class="x-button close" onclick="closeModal('loginModal')">X</span>
+                            <h3>Log in</h3> 
+                            <div class="divider mx-3"></div>
+                            <form class="m-auto my-2 border-none p-1" method = "post" action="http://localhost:3000/loginAcc">
+                                <div class="row stack-xs space-between">
+                                    <label class="txt-w-semibold">Email:</label>
+                                    <input type="text" name = "email" id = "email" autocomplete="email">
+                                </div>
+                                <div class="row stack-xs space-between">
+                                    <label class="txt-w-semibold">Password:</label>
+                                    <input type="password" name = "password" id = "password" autocomplete="current-password">
+        
+                                </div>
+                                <input type="submit" value="Log in" class="my-1">
+                            </form>
+                            <button class="button-main center-x px-2" onclick="openModal('signupModal')">Sign Up Instead</button>
+                        </div>
+                    </div>
                     <div class="stack ml-2 col-3 mt-0 center-x border-all border-round background-lighter">
+                        
                         <img class="icon-circle" src="https://via.placeholder.com/250">
                         <h3 id="EmailHTag">Username</h3>
                         <div class="stack my-0">
@@ -61,6 +83,9 @@
                             <h6>Rising Sign: </h6>
                             <p id = "risingSign">Pisces</p>
                         </div>
+                        <form method = "get" action = "http://localhost:3000/logout"> 
+                        <input type="submit" value="Logout" class="my-1">
+                    </form>
                     </div>
                 </div>
             </section>

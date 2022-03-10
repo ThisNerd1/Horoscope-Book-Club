@@ -48,8 +48,17 @@ app.get("/accPage", urlendcodedParser, checkAuth, (req, res)=>{
     console.log(
         'The link works'
     )
-
     res.sendFile(__dirname + "/public/account.html");
+})
+
+app.get('/logout', (req, res) => {
+    req.session.destroy(err => {
+        if (err) {
+            console.log(err)
+            console.log("You logged out")
+        }
+    })
+    res.sendFile(__dirname + "/public/index.html");
 })
 // app.post("/editAcc", urlendcodedParser, routes.editUser, (req, res) => {
 //     res.sendFile(__dirname + "/public/account.html");
