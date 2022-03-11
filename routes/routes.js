@@ -30,51 +30,6 @@ const users = mongoose.model('users', userSchema);
 exports.createUser = (req, res, next) => {
     let salt = bcrypt.genSaltSync(10);
     let hash = bcrypt.hashSync(req.body.password, salt);
-    
-    let birthday = req.body.birthDate;
-    // let year = birthday.substring(0, 4);
-    // let month = birthday.substring(5, 7);
-    // let day = birthday.substring(8, 10);
-    // let finalBirthday = "";
-    // switch(month){
-    //     case "01":
-    //         finalBirthday = finalBirthday + "January" + ` ${day}, ${year}` ;
-    //         break;
-    //         case "01":
-    //         finalBirthday = finalBirthday + "February" + ` ${day}, ${year}`;
-    //         break;
-    //         case "01":
-    //         finalBirthday = finalBirthday + "March" + ` ${day}, ${year}`;
-    //         break;
-    //         case "01":
-    //         finalBirthday = finalBirthday + "April" + ` ${day}, ${year}`;
-    //         break;
-    //         case "01":
-    //         finalBirthday = finalBirthday + "May" + ` ${day}, ${year}`;
-    //         break;
-    //         case "01":
-    //         finalBirthday = finalBirthday + "June" + ` ${day}, ${year}`;
-    //         break;
-    //         case "01":
-    //         finalBirthday = finalBirthday + "July"+ ` ${day}, ${year}`;
-    //         break;
-    //         case "08":
-    //         finalBirthday = finalBirthday + "August"+ ` ${day}, ${year}`;
-    //         break;
-    //         case "09":
-    //         finalBirthday = finalBirthday + "September"+ ` ${day}, ${year}`;
-    //         break;
-    //         case "10":
-    //         finalBirthday = finalBirthday + "October"+ ` ${day}, ${year}`;
-    //         break;
-    //         case "11":
-    //         finalBirthday = finalBirthday + "November"+ ` ${day}, ${year}`;
-    //         break;
-    //         case "12":
-    //         finalBirthday = finalBirthday + "December"+ ` ${day}, ${year}`;
-    //         break;
-        
-    // }
     const User = new users({ 
         Name: req.body.name, 
         password: hash, 
@@ -116,18 +71,17 @@ exports.loginUser = (req, res, next) => {
     });
 }
 
-exports.accountPage = (req, res, next) => {
-
-}
-
-exports.editUser = (req, res) => {
-    let email = req.body.email;
-    let password = req.body.password;
-    users.updateOne({email: email, password: password}, {
-        email : req.body.Email,
-        password : req.body.password
+exports.editUser = (req, res, next) => {
+    let email = req.session.email;
+    let password = req.session.password;
+    users.findOneAndUpdate({email: email}, {
+        Name: req.body.name,
+        email : req.body.email,
+        password : req.body.password,
+        sunSign: req.body.sunSign, 
+        moonSign: req.body.moonSign,
+        risingSign: req.body.risingSign
     })
-    users.save();
     next();
 }
 

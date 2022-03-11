@@ -36,7 +36,8 @@ app.post("/loginAcc", urlendcodedParser,routes.loginUser ,(req, res) => {
     email=req.body.email;
     req.session.user = {
         isAuthenticated : true,
-        email : req.body.email
+        email : req.body.email,
+        password : req.body.password
     }
     res.sendFile(__dirname + "/public/account.html")
 });
@@ -60,8 +61,8 @@ app.get('/logout', (req, res) => {
     })
     res.sendFile(__dirname + "/public/index.html");
 })
-// app.post("/editAcc", urlendcodedParser, routes.editUser, (req, res) => {
-//     res.sendFile(__dirname + "/public/account.html");
-// });
+app.post("/editAcc", urlendcodedParser, routes.editUser, (req, res) => {
+    res.sendFile(__dirname + "/public/account.html");
+});
 app.get("/getInfo", checkAuth, routes.getInfo)
 app.listen(3000);

@@ -90,12 +90,13 @@
                 </div>
             </section>
 
+
             <div id="editModal" class="modal m-middle">
                 <div class="modal-content background-lighter w-50">
                     <span class="x-button close" onclick="closeModal('editModal')">X</span>
                     <h3>Edit information:</h3> 
                     <div class="divider mx-3"></div>
-                    <form class="m-auto my-2 border-none p-1" method = "post" action="http://localhost:3000/signUpAcc">
+                    <form class="m-auto my-2 border-none p-1" method = "post" action="http://localhost:3000/editAcc">
                         <div class="row stack-xs space-between">
                             <label class="txt-w-semibold">Name:</label>
                             <input type="text"name = "name" id = "name">
@@ -103,6 +104,10 @@
                         <div class="row stack-xs space-between">
                             <label class="txt-w-semibold">Email:</label>
                             <input type="text" name = "email" id = "email" autocomplete="email">
+                        </div>
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold">Password:</label>
+                            <input type="text" name = "password" id = "password">
                         </div>
                         <div class="row stack-xs space-between">
                         <div class="row stack-xs space-between">
@@ -156,7 +161,7 @@
                                 <option value="Pisces">Pisces</option>
                             </select>
                         </div>
-                        <input type="submit" value="Sign up" class="my-1">
+                        <input type="submit" value="Save" class="my-1">
                     </form>
                 </div>
             </div>
