@@ -42,7 +42,7 @@
                             <p>You haven't posted anything.</p>
                         </div>
                     </div>
-                    <p>Edit account<a href='#' onclick="openModal('loginModal')">here </a></p>
+                    <p>Edit account<a href='#' onclick="openModal('editModal')">here</a></p>
                     <div id="loginModal" class="modal m-middle">
                         <div class="modal-content background-lighter w-50">
                             <span class="x-button close" onclick="closeModal('loginModal')">X</span>
@@ -89,6 +89,77 @@
                     </div>
                 </div>
             </section>
+
+            <div id="editModal" class="modal m-middle">
+                <div class="modal-content background-lighter w-50">
+                    <span class="x-button close" onclick="closeModal('editModal')">X</span>
+                    <h3>Edit information:</h3> 
+                    <div class="divider mx-3"></div>
+                    <form class="m-auto my-2 border-none p-1" method = "post" action="http://localhost:3000/signUpAcc">
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold">Name:</label>
+                            <input type="text"name = "name" id = "name">
+                        </div>
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold">Email:</label>
+                            <input type="text" name = "email" id = "email" autocomplete="email">
+                        </div>
+                        <div class="row stack-xs space-between">
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold">Sun Sign:</label>
+                            <select name="sunSign" id="sunSign">
+                                <option value="Aries">Aries</option>
+                                <option value="Taurus">Taurus</option>
+                                <option value="Gemini">Gemini</option>
+                                <option value="Cancer">Cancer</option>
+                                <option value="Leo">Leo</option>
+                                <option value="Virgo">Virgo</option>
+                                <option value="Libra">Libra</option>
+                                <option value="Scorpio">Scorpio</option>
+                                <option value="Sagittarius">Sagittarius</option>
+                                <option value="Capricorn">Capricorn</option>
+                                <option value="Aquarius">Aquarius</option>
+                                <option value="Pisces">Pisces</option>
+                            </select>
+                        </div>
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold">Moon Sign:</label>
+                            <select name="moonSign" id="moonSign">
+                                <option value="Aries">Aries</option>
+                                <option value="Taurus">Taurus</option>
+                                <option value="Gemini">Gemini</option>
+                                <option value="Cancer">Cancer</option>
+                                <option value="Leo">Leo</option>
+                                <option value="Virgo">Virgo</option>
+                                <option value="Libra">Libra</option>
+                                <option value="Scorpio">Scorpio</option>
+                                <option value="Sagittarius">Sagittarius</option>
+                                <option value="Capricorn">Capricorn</option>
+                                <option value="Aquarius">Aquarius</option>
+                                <option value="Pisces">Pisces</option>
+                            </select>
+                        </div>
+                        <div class="row stack-xs space-between">
+                            <label class="txt-w-semibold">Rising Sign:</label>
+                            <select name="risingSign" id="risignSign">
+                                <option value="Aries">Aries</option>
+                                <option value="Taurus">Taurus</option>
+                                <option value="Gemini">Gemini</option>
+                                <option value="Cancer">Cancer</option>
+                                <option value="Leo">Leo</option>
+                                <option value="Virgo">Virgo</option>
+                                <option value="Libra">Libra</option>
+                                <option value="Scorpio">Scorpio</option>
+                                <option value="Sagittarius">Sagittarius</option>
+                                <option value="Capricorn">Capricorn</option>
+                                <option value="Aquarius">Aquarius</option>
+                                <option value="Pisces">Pisces</option>
+                            </select>
+                        </div>
+                        <input type="submit" value="Sign up" class="my-1">
+                    </form>
+                </div>
+            </div>
 
             <footer class="page-bottom">
                 <p>Copyright &copy; Crime Committers (Allegedly) 2022</p>
